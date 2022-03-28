@@ -1,6 +1,6 @@
 // playwright.config.js
 // @ts-check
-const { devices } = require("@recordreplay/playwright-config");
+const { devices } = require("@replayio/playwright");
 
 /** @type {import('@playwright/test').PlaywrightTestConfig} */
 const config = {
@@ -12,7 +12,7 @@ const config = {
 	},
 	projects: [
 		{
-			name: "firefox",
+			name: "replay-firefox",
 			use: {
 				...devices["Replay Firefox"],
 			},

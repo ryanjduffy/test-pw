@@ -11,8 +11,7 @@
   "dependencies": {
     "@enact/core": "^4.1.2",
     "@playwright/test": "^1.18.1",
-    "@recordreplay/playwright": "^1.18.3",
-    "@recordreplay/playwright-config": "file:../playwright-config/dist",
+    "@replayio/playwright": "^0.1.0-alpha.1",
     "playwright": "^1.19.2"
   }
 }
