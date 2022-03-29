@@ -21,9 +21,9 @@ jobs:
         uses: bahmutov/npm-install@v1
 
       - name: Test and Upload
-        uses: replayio/action-playwright@ryan-action-upload
+        uses: replayio/action-playwright@v0.3.0
         with:
           apiKey: ${{ secrets.RECORD_REPLAY_API_KEY }}
           issue-number: ${{ github.event.pull_request.number }}
           public: true
-          uploadAll: true
+          upload-all: true
