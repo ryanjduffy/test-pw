@@ -25,3 +25,4 @@ jobs:
         with:
           apiKey: ${{ secrets.RECORD_REPLAY_API_KEY }}
           public: true
+          uploadAll: true
