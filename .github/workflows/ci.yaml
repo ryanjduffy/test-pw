@@ -24,5 +24,6 @@ jobs:
         uses: replayio/action-playwright@ryan-action-upload
         with:
           apiKey: ${{ secrets.RECORD_REPLAY_API_KEY }}
+          issue-number: ${{ github.event.pull_request.number }}
           public: true
           uploadAll: true
