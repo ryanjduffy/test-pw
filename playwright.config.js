@@ -17,6 +17,12 @@ const config = {
 				...devices["Replay Firefox"],
 			},
 		},
+		{
+			name: "replay-chromium",
+			use: {
+				...devices["Replay Chromium"],
+			},
+		},
 	],
 };
 
