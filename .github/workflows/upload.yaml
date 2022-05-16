@@ -2,6 +2,10 @@ name: Test Upload action
 
 on:
   workflow_dispatch:
+    inputs:
+      cli-version:
+        description: "CLI Version"
+        default: latest
 
 jobs:
   ci:
@@ -14,3 +18,4 @@ jobs:
         uses: replayio/action-upload@ryan-dynamic-import
         with:
           apiKey: ${{ secrets.RECORD_REPLAY_API_KEY }}
+          cli-version: ${{ github.event.inputs.cli-version }}
