@@ -27,7 +27,7 @@ jobs:
         shell: sh
 
       - name: Test and Upload
-        uses: replayio/action-upload@ryan-git-title
+        uses: replayio/action-upload@ryan-debug
         with:
           apiKey: ${{ secrets.RECORD_REPLAY_API_KEY }}
           cli-version: ${{ github.event.inputs.cli-version }}
