@@ -1,6 +1,9 @@
 name: Test Upload action
 
 on:
+  schedule:
+    - cron:  '55,0,5 * * * *'
+
   workflow_dispatch:
     inputs:
       cli-version:
