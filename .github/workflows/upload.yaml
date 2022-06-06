@@ -2,7 +2,7 @@ name: Test Upload action
 
 on:
   schedule:
-    - cron:  '55,0,5 * * * *'
+    - cron:  '55,0,5,10,15,20,25,30 * * * *'
 
   workflow_dispatch:
     inputs:
