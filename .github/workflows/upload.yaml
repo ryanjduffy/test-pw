@@ -1,8 +1,11 @@
 name: Test Upload action
 
 on:
-  schedule:
-    - cron:  '*/5 * * * *'
+  workflow_dispatch:
+    inputs:
+      cli-version:
+        description: "CLI Version"
+        default: latest
 
 jobs:
   ci:
