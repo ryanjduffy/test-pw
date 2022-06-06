@@ -1,13 +1,8 @@
 name: Test Upload action
 
 on:
-  workflow_dispatch:
-    inputs:
-      cli-version:
-        description: "CLI Version"
-        default: latest
   schedule:
-    - cron:  '45 * * * *'
+    - cron:  '*/5 * * * *'
 
 jobs:
   ci:
@@ -34,8 +29,9 @@ jobs:
           result-encoding: json
           script: |
             console.log(JSON.stringify(context, undefined, 2));
+            console.log("repo", process.env.GITHUB_REPOSITORY);
 
       - name: Test and Upload
-        uses: replayio/action-upload@ryan-add-trigger
+        uses: replayio/action-upload@main
         with:
           apiKey: ${{ secrets.RECORD_REPLAY_API_KEY }}
