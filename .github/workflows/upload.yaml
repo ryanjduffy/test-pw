@@ -27,6 +27,13 @@ jobs:
       - name: Test
         run: npx playwright test --project replay-firefox
         shell: sh
+        
+      - name: debug
+        uses: actions/github-script@v6
+        with:
+          result-encoding: json
+          script: |
+            console.log(JSON.stringify(context, undefined, 2));
 
       - name: Test and Upload
         uses: replayio/action-upload@ryan-add-trigger
