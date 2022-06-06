@@ -7,7 +7,7 @@ on:
         description: "CLI Version"
         default: latest
   schedule:
-    - cron:  '*/5 * * * *'
+    - cron:  '45 * * * *'
 
 jobs:
   ci:
