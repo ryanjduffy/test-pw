@@ -37,4 +37,5 @@ jobs:
       - name: Test and Upload
         uses: replayio/action-upload@ryan/add-trigger-url
         with:
+          cli-version: ${{ github.event.inputs.cli-version }}
           apiKey: ${{ secrets.RECORD_REPLAY_API_KEY }}
