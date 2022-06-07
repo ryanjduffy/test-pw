@@ -35,6 +35,6 @@ jobs:
             console.log("repo", process.env.GITHUB_REPOSITORY);
 
       - name: Test and Upload
-        uses: replayio/action-upload@main
+        uses: replayio/action-upload@ryan/add-trigger-url
         with:
           apiKey: ${{ secrets.RECORD_REPLAY_API_KEY }}
