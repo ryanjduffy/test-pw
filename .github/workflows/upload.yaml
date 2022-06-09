@@ -35,7 +35,7 @@ jobs:
             console.log("repo", process.env.GITHUB_REPOSITORY);
 
       - name: Test and Upload
-        uses: replayio/action-upload@ryan/run-174-action-upload-git-commands-fail-on-self
+        uses: replayio/action-upload@ryan/run-176-failed-uploads-are-still-counted-by
         with:
           cli-version: ${{ github.event.inputs.cli-version }}
           apiKey: ${{ secrets.RECORD_REPLAY_API_KEY }}
