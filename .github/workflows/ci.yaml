@@ -23,6 +23,11 @@ jobs:
 
       - name: Install dependencies
         uses: bahmutov/npm-install@v1
+        env:
+          PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: true
+
+      - name: Install Replay Playwright Browsers
+        run: npx @replayio/playwright install
 
       - name: Test and Upload
         uses: replayio/action-playwright@v0.4.10
