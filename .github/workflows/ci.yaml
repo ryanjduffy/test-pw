@@ -2,6 +2,10 @@ name: Run CI
 
 on:
   workflow_dispatch:
+    inputs:
+      project:
+        description: Playwright project
+        default: replay-firefox
   pull_request:
     types: [opened, synchronize, reopened]
 
@@ -23,6 +27,7 @@ jobs:
       - name: Test and Upload
         uses: replayio/action-playwright@v0.4.10
         with:
+          project: ${{ github.event.inputs.project || 'replay-firefox' }}
           apiKey: ${{ secrets.RECORD_REPLAY_API_KEY }}
           issue-number: ${{ github.event.pull_request.number }}
           public: true
