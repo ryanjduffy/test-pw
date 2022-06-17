@@ -30,7 +30,7 @@ jobs:
         run: npx @replayio/playwright install
 
       - name: Test and Upload
-        uses: replayio/action-playwright@ryan/fe-270-update-gh-pr-comment
+        uses: replayio/action-playwright@fe-270-update-gh-pr-comment
         with:
           project: ${{ github.event.inputs.project || 'replay-firefox' }}
           apiKey: ${{ secrets.RECORD_REPLAY_API_KEY }}
