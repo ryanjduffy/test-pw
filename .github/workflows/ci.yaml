@@ -30,13 +30,10 @@ jobs:
         run: npx @replayio/playwright install
 
       - name: Test and Upload
-        uses: replayio/action-playwright@ryan/bac-1831-refactor-commenting-into-a-new-action
+        uses: replayio/action-playwright@v0.4.12
         with:
           project: ${{ github.event.inputs.project || 'replay-firefox' }}
           apiKey: ${{ secrets.RECORD_REPLAY_API_KEY }}
           issue-number: ${{ github.event.pull_request.number }}
           public: true
           upload-all: true
-        env:
-          RECORD_REPLAY_VERBOSE: 1
-          DEBUG: "pw:browser"
