@@ -11,7 +11,7 @@ on:
 
 jobs:
   ci:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -30,7 +30,7 @@ jobs:
         run: npx @replayio/playwright install
 
       - name: Test and Upload
-        uses: replayio/action-playwright@v0.4.11
+        uses: replayio/action-playwright@0706-edit-content
         with:
           project: ${{ github.event.inputs.project || 'replay-firefox' }}
           apiKey: ${{ secrets.RECORD_REPLAY_API_KEY }}
