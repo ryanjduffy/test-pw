@@ -12,7 +12,7 @@ on:
 jobs:
   ci:
     runs-on: self-hosted
-    container: runner-image
+    container: ghcr.io/ryanjduffy/runner-image:latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
