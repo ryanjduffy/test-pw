@@ -12,7 +12,11 @@ on:
 jobs:
   ci:
     runs-on: self-hosted
-    container: ghcr.io/ryanjduffy/runner-image:latest
+    container:
+      image: ghcr.io/ryanjduffy/runner-image:latest
+      credentials:
+        username: ${{ github.actor }}
+        password: ${{ secrets.github_token }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
