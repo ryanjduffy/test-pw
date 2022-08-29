@@ -11,7 +11,7 @@
   "dependencies": {
     "@enact/core": "^4.1.2",
     "@playwright/test": "^1.18.1",
-    "@replayio/playwright": "^0.2.5",
+    "@replayio/playwright": "^0.2.24",
     "@replayio/replay": "^0.2.1",
     "playwright": "^1.19.2"
   }
