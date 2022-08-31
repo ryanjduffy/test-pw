@@ -30,13 +30,10 @@ jobs:
         run: npx @replayio/playwright install
 
       - name: Test and Upload
-        uses: replayio/action-playwright@v0.4.11
+        uses: replayio/action-playwright@ryan/scs-89-newfold-upload-all-false-for-action
         with:
           project: ${{ github.event.inputs.project || 'replay-firefox' }}
-          apiKey: ${{ secrets.RECORD_REPLAY_API_KEY }}
+          api-key: ${{ secrets.RECORD_REPLAY_API_KEY }}
           issue-number: ${{ github.event.pull_request.number }}
           public: true
           upload-all: true
-        env:
-          RECORD_REPLAY_VERBOSE: 1
-          DEBUG: "pw:browser"
