@@ -36,3 +36,4 @@ jobs:
           api-key: ${{ secrets.RECORD_REPLAY_API_KEY }}
           issue-number: ${{ github.event.pull_request.number }}
           public: true
+          upload-all: invalid-value
