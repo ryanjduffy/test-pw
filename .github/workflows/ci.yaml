@@ -34,9 +34,5 @@ jobs:
         with:
           project: ${{ github.event.inputs.project || 'replay-firefox' }}
           apiKey: ${{ secrets.RECORD_REPLAY_API_KEY }}
-          issue-number: ${{ github.event.pull_request.number }}
           public: true
           upload-all: true
-        env:
-          RECORD_REPLAY_VERBOSE: 1
-          DEBUG: "pw:browser"
