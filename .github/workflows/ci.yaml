@@ -9,6 +9,9 @@ on:
   pull_request:
     types: [opened, synchronize, reopened]
 
+env:
+  RECORD_REPLAY_CRASH_AT_WARNING: 1
+
 jobs:
   ci:
     runs-on: macos-latest
