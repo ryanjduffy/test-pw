@@ -8,6 +8,9 @@ on:
         default: replay-firefox
   pull_request:
     types: [opened, synchronize, reopened]
+    
+env:
+  RECORD_REPLAY_FIREFOX_DOWNLOAD_FILE: linux-gecko-20230516-57d59035723f-7b6236f847e2.tar.bz2
 
 jobs:
   ci:
