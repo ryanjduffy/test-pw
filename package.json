@@ -4,16 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "playwright test"
+    "test": "playwright test --reporter @replayio/playwright/reporter,line --project replay-chromium"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@enact/core": "^4.1.2",
     "@playwright/test": "^1.18.1",
-    "@replayio/playwright": "^0.2.5",
-    "@replayio/replay": "^0.2.1",
-    "action-upload": "file:../action-upload",
+    "@replayio/playwright": "^1.0.1",
+    "@replayio/replay": "^0.12.12",
     "playwright": "^1.19.2"
   }
 }
