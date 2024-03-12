@@ -10,9 +10,12 @@
   "license": "ISC",
   "dependencies": {
     "@enact/core": "^4.1.2",
-    "@playwright/test": "^1.18.1",
-    "@replayio/playwright": "^1.0.1",
+    "@replayio/playwright": "^1.1.12",
     "@replayio/replay": "^0.12.12",
     "playwright": "^1.19.2"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.40.1",
+    "@types/node": "^20.11.26"
   }
 }
